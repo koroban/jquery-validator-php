@@ -1,4 +1,7 @@
 <?php
+// This demo still performs validation on both the client and server side
+// But it requires JS to display the server-generated errors
+
 include("jqueryvalidator.class.php");
 
 // Start validator:
@@ -66,7 +69,7 @@ if(!empty($_POST)) {
 	<link rel="stylesheet" type="text/css" href="default.css" />
 </head>
 <body data-errors='<?php echo $V->getJQVCompatibleErrors();?>'>
-<form id="demoForm" method="post" action="demo.php" enctype="multipart/form-data">
+<form id="demoForm" method="post" action="simpledemo.php" enctype="multipart/form-data">
 	
 	<h1>Example Form:</h1>
 	<p>
