@@ -1,0 +1,75 @@
+{
+	"RequiredField": {
+		"required":true
+	},
+	"EmailField": {
+		"required":true,
+		"email":true
+	},
+	"ConfirmEmailField": {
+		"required":true,
+		"equalTo":"#EmailField"
+	},
+	"UrlField": {
+		"required":true,
+		"url":true
+	},
+	"DateField": {
+		"required":true,
+		"date":true
+	},
+	"DateISOField": {
+		"required":true,
+		"dateISO":true
+	},
+	"NumberField": {
+		"required":true,
+		"number":true
+	},
+	"DigitsField": {
+		"required":true,
+		"digits":true
+	},
+	"CreditCardField": {
+		"required":true,
+		"creditcard":true
+	},
+	"FileField": {
+		"required":true,
+		"accept":"txt|pdf|odf|doc"
+	},
+	"MinlengthField": {
+		"required":true,
+		"minlength":6
+	},
+	"MaxlengthField": {
+		"required":true,
+		"maxlength":10
+	},
+	"RangeField": {
+		"required":true,
+		"range":[0,100]
+	},
+	"MinField": {
+		"required":true,
+		"min":20
+	},
+	"MaxField": {
+		"required":true,
+		"max":50
+	},
+	"RangelengthField": {
+		"required":true,
+		"rangelength":[5,10]
+	},
+	"RemoteField": {
+		"required":true,
+		"remote": {
+			"url":"#",
+			"type":"post",
+			"data": {
+				"remoteMethod":"checkEmail"
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+body{
+	cursor: default;
+	font-family: verdana;
+	font-size: 10pt;
+	color #444;
+}
+small{
+	color: #888;
+	font-size: 8pt;
+}
+h1{
+	margin-left: 10px;
+	font-size: 16pt;
+	color: #87D1FF;
+}
+p{
+	margin-left: 10px;
+}
+.formContainer{
+	float: left;
+	margin-left: 20px;
+	background: #F5F5F5;
+	border: 1px solid #EEE;
+}
+.formElement{
+	float: left;
+	clear: both;
+	width: 500px;
+	height: 40px;
+	padding: 5px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #EEE;
+}
+.formElement LABEL{
+	float: left;
+	width: 200px;
+}
+.formElement LABEL.error {
+	clear: left;
+	width: 450px;
+	color: #C00;
+}
+.action{
+	background: #E0F3FF;	
+}
+INPUT.button{
+	cursor: pointer;
+}
+.first{
+	clear: left;
+}
