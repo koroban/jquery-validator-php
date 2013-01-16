@@ -165,7 +165,8 @@ if(!empty($_POST)) {
 
 		<div class="formElement">
 			<label for="RemoteField">RemoteField:</label>
-			<input type="text" name="RemoteField" id="RemoteField" value="" />
+			<input type="text" name="RemoteField" id="RemoteField" value="" /><br />
+			(must equal howard.yeend@gg.com to pass remote validation)
 		</div>
 
 		<div class="formElement action">
