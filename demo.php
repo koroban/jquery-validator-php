@@ -203,7 +203,8 @@ if(!empty($_POST)) {
 
 		<div class="formElement">
 			<label for="RemoteField">RemoteField:</label>
-			<input type="text" name="RemoteField" id="RemoteField" value="<?php echo $formDefault['RemoteField'] ?>" />
+			<input type="text" name="RemoteField" id="RemoteField" value="<?php echo $formDefault['RemoteField'] ?>" /><br />
+			(must equal howard.yeend@gg.com to pass remote validation)
 			<?php echo $V->getErrorForField("RemoteField"); ?>
 		</div>
 
