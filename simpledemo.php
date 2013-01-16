@@ -11,9 +11,10 @@ $V = new Validator();
 $V->setRuleFile("./demo.validate.json");
 
 // Add remote methods
-$V->addMethod('checkEmail', 'Please check your email address.', function($value){
+function checkEmail($value){
 	return ($value=='howard.yeend@gg.com');
-});
+}
+$V->addMethod('checkEmail', 'Please check your email address.', checkEmail);
 
 // Perform remote validation, if appropriate
 $V->performRemoteValidation();
