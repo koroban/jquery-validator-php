@@ -1,5 +1,5 @@
 <?php
-include("jqueryvalidator.class.php");
+include("validator.class.php");
 
 // default form values:
 $formDefault = array();
@@ -28,10 +28,7 @@ $V = new Validator();
 $V->setRuleFile("./demo.validate.json");
 
 // Add remote methods
-function checkEmail($value){
-	return ($value=='howard.yeend@gg.com');
-}
-$V->addMethod('checkEmail', 'Please check your email address.', checkEmail);
+$V->addMethod('checkEmail', 'Please check your email address.', create_function('$value', 'return $value=="howard.yeend@gg.com";'));
 
 // Perform remote validation, if appropriate
 $V->performRemoteValidation();

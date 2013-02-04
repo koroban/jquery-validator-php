@@ -1,0 +1,62 @@
+{
+    "maxWordsField": {
+        "required": true,
+        "maxWords": 2
+    },
+    "minWordsField": {
+        "required": true,
+        "minWords": 2
+    },
+    "rangeWordsField": {
+        "required": true,
+        "rangeWords": [2,4]
+    },
+    "lettersonlyField": {
+        "required": true,
+        "lettersonly": true
+    },
+    "letterswithbasicpuncField": {
+        "required": true,
+        "letterswithbasicpunc": true
+    },
+    "alphanumericField": {
+        "required": true,
+        "alphanumeric": true
+    },
+    "nowhitespaceField": {
+        "required": true,
+        "nowhitespace": true
+    },
+    "integerField": {
+        "required": true,
+        "integer": true
+    },
+    "time24hField": {
+        "required": true,
+        "time24h": true
+    },
+    "time12hField": {
+        "required": true,
+        "time12h": true
+    },
+    "phoneUSField": {
+        "required": true,
+        "phoneUS": true
+    },
+    "phoneUKField": {
+        "required": true,
+        "phoneUK": true
+    },
+    "mobileUKField": {
+        "required": true,
+        "mobileUK": true
+    },
+    "postcodeField": {
+        "required": true,
+        "postcode": true
+    },
+    "strippedminlengthField": {
+        "required": true,
+        "strippedminlength": 4
+    }
+}
