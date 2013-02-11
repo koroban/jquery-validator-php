@@ -1,6 +1,5 @@
 <?php
 include("validator.class.php");
-include("additionalvalidator.class.php");
 
 // default form values:
 $formDefault = array();
@@ -21,7 +20,7 @@ $formDefault["postcodeField"] = "";
 $formDefault["strippedminlengthField"] = "";
 
 // Start validator:
-$V = new AdditionalValidator();
+$V = new Validator();
 
 // Fetch and set the rules
 $V->setRuleFile("./additional.validate.json");
@@ -31,10 +30,10 @@ $V->addMethod('checkEmail', 'Please check your email address.', function($value)
 	return ($value=='howard@gg.com');
 });
 
-// Perform remote validation, if appropriate
-$V->performRemoteValidation();
-
 if(!empty($_POST)) {
+
+	// Perform remote validation, if appropriate
+	$V->performRemoteValidation();
 
 	// Munge the posted data to include file name details
 	$postedDetails = $_POST;

@@ -30,10 +30,10 @@ $V->setRuleFile("./demo.validate.json");
 // Add remote methods
 $V->addMethod('checkEmail', 'Please check your email address.', create_function('$value', 'return $value=="howard.yeend@gg.com";'));
 
-// Perform remote validation, if appropriate
-$V->performRemoteValidation();
-
 if(!empty($_POST)) {
+
+	// Perform remote validation, if appropriate
+	$V->performRemoteValidation();
 
 	// Munge the posted data to include file name details
 	$postedDetails = $_POST;
