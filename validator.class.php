@@ -36,7 +36,7 @@ class Validator {
 			'MIN'         					=> 'Please enter a value greater than or equal to {0}.',
 			'MAX'         					=> 'Please enter a value less than or equal to {0}.',
 			'RANGELENGTH'						=> 'Please enter a value between {0} and {1} characters long.',
-			'MAXWORDS'              => "Please enter {0} words or less.",
+			'MAXWORDS'              => "Please enter {0} words or fewer.",
 			'MINWORDS'              => "Please enter at least {0} words.",
 			'RANGEWORDS'            => "Please enter between {0} and {1} words.",
 			'LETTERSWITHBASICPUNC'  => "Letters or punctuation only please.",
