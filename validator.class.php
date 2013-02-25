@@ -284,7 +284,7 @@ class ValidatorMethods {
     public static function call($ruleName, $value, $params, $data) {
         $ruleName = strtolower(trim($ruleName));
 
-        if (method_exists(self, $ruleName)) {
+        if (method_exists(get_class(), $ruleName)) {
             // We have a validation method for this rule, call it:
             return self::$ruleName($value, $params, $data);
         }
