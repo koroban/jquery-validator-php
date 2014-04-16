@@ -293,12 +293,12 @@ class ValidatorMethods {
 
     public static function minlength($value, $params = 0, $data = null)
     {
-        return strlen($value) >= $params;
+        return mb_strlen($value) >= $params;
     }
 
     public static function maxlength($value, $params = 0, $data = null)
     {
-        return strlen($value) <= $params;
+        return mb_strlen($value) <= $params;
     }
 
     public static function rangelength($value, $params, $data = null)
@@ -465,19 +465,19 @@ class ValidatorMethods {
     public static function maxwords($value, $params = null, $data = null)
     {
         $value = strip_tags($value);
-        return preg_match_all("/\b\w+\b/", $value, $matches) <= (int)$params;
+        return preg_match_all("/\b\w+\b/u", $value, $matches) <= (int)$params;
     }
 
     public static function minwords($value, $params = null, $data = null)
     {
         $value = strip_tags($value);
-        return preg_match_all("/\b\w+\b/", $value, $matches) >= (int)$params;
+        return preg_match_all("/\b\w+\b/u", $value, $matches) >= (int)$params;
     }
 
     public static function rangewords($value, $params, $data = null)
     {
         $value = strip_tags($value);
-        if (preg_match_all("/\b\w+\b/", $value, $matches)) {
+        if (preg_match_all("/\b\w+\b/u", $value, $matches)) {
             $value = preg_split('/ +/', $value);
             return count($value) >= $params[0] && count($value) <= $params[1];
         }
@@ -485,22 +485,22 @@ class ValidatorMethods {
 
     public static function lettersonly($value, $params, $data = null)
     {
-        return preg_match("/^[a-z]+$/i", $value);
+        return preg_match("/^[a-z]+$/iu", $value);
     }
 
     public static function letterswithbasicpunc($value, $params, $data = null)
     {
-        return preg_match("/^[a-z\-.,()'\"\s]+$/i", $value);
+        return preg_match("/^[a-z\-.,()'\"\s]+$/iu", $value);
     }
 
     public static function alphanumeric($value, $params, $data = null)
     {
-        return preg_match("/^\w+$/i", $value);
+        return preg_match("/^\w+$/iu", $value);
     }
 
     public static function nowhitespace($value, $params, $data = null)
     {
-        return preg_match("/^\S+$/i", $value);
+        return preg_match("/^\S+$/iu", $value);
     }
 
     public static function integer($value, $params, $data = null)
@@ -587,6 +587,6 @@ class ValidatorMethods {
 
     public static function strippedminlength($value, $params, $data = null)
     {
-        return strlen(strip_tags($value)) >= $params;
+        return mb_strlen(strip_tags($value)) >= $params;
     }
 }
